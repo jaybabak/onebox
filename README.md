@@ -26,7 +26,11 @@ Run the following npm command to start the development environment.
 ```bash
 npm run start
 ```
+Run development environment In watch mode.
 
-### Additional documentation
+```bash
+npm run start:dev 
+```
+## Additional documentation
 
 [Click Here](https://github.com/jaybabak/onebox/tree/main/app)
