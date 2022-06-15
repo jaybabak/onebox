@@ -31,6 +31,11 @@ Run development environment In watch mode.
 ```bash
 npm run start:dev 
 ```
+
+## View The App
+
+Visit [http://localhost:3000](http://localhost:3000)
+
 ## Additional documentation
 
 [Click Here](https://github.com/jaybabak/onebox/tree/main/app)
