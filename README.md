@@ -16,9 +16,7 @@ The following dependancies have been added to improve developer workflow and bui
 Install Nest.js CLI
 
 ```bash
-
 npm i -g @nestjs/cli
-
 ```
 
 ## Start Development Environment
@@ -26,7 +24,9 @@ npm i -g @nestjs/cli
 Run the following npm command to start the development environment.
 
 ```bash
-
 npm run start
-
 ```
+
+### Additional documentation
+
+[Click Here](https://github.com/jaybabak/onebox/tree/main/app)
