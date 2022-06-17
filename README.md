@@ -30,7 +30,7 @@ Install Nest.js CLI globally
 ```bash
 npm i -g @nestjs/cli
 ```
-## Build docer container and start development environment
+## Build docler containers and start development environment
 
 Run the following command to build the containers and start the development environment, make sure to be inside the "app" directory.
 
