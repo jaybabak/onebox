@@ -1,7 +1,5 @@
 SHELL := /bin/bash
 
-include .env
-
 default: up
 
 ## 
@@ -34,12 +32,12 @@ help : Makefile
 
 .PHONY: up
 up:
-	@echo "Building application and starting container..."
+	@echo "Building front-end application and starting container..."
 	docker-compose up
 
 .PHONY: up-silent
 up-silent:
-	@echo "Building application and starting container in background mode..."
+	@echo "Building front-end application and starting container in background mode..."
 	docker-compose up -d
 
 .PHONY: down
@@ -55,10 +53,6 @@ stop:
 .PHONY: shell
 shell:
 	@docker exec -ti onebox /bin/sh
-
-.PHONY: shell-db
-shell-db:
-	@docker exec -ti postgres /bin/bash
 
 # https://stackoverflow.com/a/6273809/1826109
 %:
