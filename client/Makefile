@@ -35,6 +35,11 @@ up:
 	@echo "Building front-end application and starting container..."
 	docker-compose up
 
+.PHONY: build
+build:
+	@echo "Re-building container and installing dependancies..."
+	docker-compose up --build
+
 .PHONY: up-silent
 up-silent:
 	@echo "Building front-end application and starting container in background mode..."
@@ -52,7 +57,7 @@ stop:
 
 .PHONY: shell
 shell:
-	@docker exec -ti onebox /bin/sh
+	@docker exec -ti onebox-client /bin/sh
 
 # https://stackoverflow.com/a/6273809/1826109
 %:

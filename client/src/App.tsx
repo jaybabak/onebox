@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Homepage from './pages/Home/HomePage';
+import ContactPage from './pages/Contact/ContactPage';
+import { Routes, Route} from "react-router-dom";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Share data such as links, text, URL's, files and photos quickly between devices..
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ONEBOX
-        </a>
-      </header>
+      <Header/>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="contact" element={<ContactPage />} />
+        </Routes>
+      <Footer/>
     </div>
   );
 }
