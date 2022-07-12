@@ -42,7 +42,7 @@ Run the following command to build the containers and start the development envi
 ```bash
 make up
 ```
-Run the container and Nest.js development environment in quiet/silent mode.
+Run the container and Nest.js development environment in quiet/silent mode (not recommended for local development, this hides the console output).
 
 ```bash
 make up-silent
