@@ -50,25 +50,30 @@ make up-silent
 
 ## Build the React front-end (client)
 
-Change directory to client folder.
+In a new terminal window, change directory to "client" folder.
 
 ```bash
 cd onebox/client
 ```
 
-Run the following command to install the dependancies, make sure to be inside the "app" directory.
+Run the following command to install the dependancies, make sure to be inside the "client" directory.
 
 ```bash
 npm install
 ```
-Run the following command to build the containers and start the development environment, make sure to be inside the "app" directory.
+Run the following command to build the containers and start the development environment, make sure to be inside the "client" directory.
 
 ```bash
 make up
+```
 
 ## View the app
 
-Visit [http://localhost:3000](http://localhost:3000).
+Visit back-end [http://localhost:3002](http://localhost:3002).
+
+Visit front-end [http://localhost:3000](http://localhost:3000).
+
+## Optional
 
 Update /etc/hosts (mac) if you want to use a custom development domain with the following:
 
