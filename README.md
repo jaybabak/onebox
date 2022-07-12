@@ -30,7 +30,7 @@ Install Nest.js CLI globally
 ```bash
 npm i -g @nestjs/cli
 ```
-## Build docler containers and start development environment
+## Build back-end Docker containers (server, db etc..)
 
 Run the following command to install the dependancies, make sure to be inside the "app" directory.
 
@@ -47,6 +47,7 @@ Run the container and Nest.js development environment in quiet/silent mode.
 ```bash
 make up-silent
 ```
+
 ## Build the React front-end (client)
 
 Change directory to client folder.
