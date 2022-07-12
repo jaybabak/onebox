@@ -81,7 +81,7 @@ Update /etc/hosts (mac) if you want to use a custom development domain with the 
 localhost:3000 onebox.dev
 ```
 
-## Available Commands
+## Available Commands (app)
   
 | Command | Description |
 |--|--|
