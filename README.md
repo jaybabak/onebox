@@ -19,7 +19,7 @@ Clone the repository
 git clone git@github.com:jaybabak/onebox.git
 ```
 
-Change directory
+Change directory.
 
 ```bash
 cd onebox/app
@@ -32,6 +32,11 @@ npm i -g @nestjs/cli
 ```
 ## Build docler containers and start development environment
 
+Run the following command to install the dependancies, make sure to be inside the "app" directory.
+
+```bash
+npm install
+```
 Run the following command to build the containers and start the development environment, make sure to be inside the "app" directory.
 
 ```bash
@@ -42,6 +47,23 @@ Run the container and Nest.js development environment in quiet/silent mode.
 ```bash
 make up-silent
 ```
+## Build the React front-end (client)
+
+Change directory to client folder.
+
+```bash
+cd onebox/client
+```
+
+Run the following command to install the dependancies, make sure to be inside the "app" directory.
+
+```bash
+npm install
+```
+Run the following command to build the containers and start the development environment, make sure to be inside the "app" directory.
+
+```bash
+make up
 
 ## View the app
 
