@@ -1,43 +1,27 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import {
-  Container,
-  Dropdown,
-  Image,
-  Menu,
-} from 'semantic-ui-react'
+import { Toolbar, Typography, Button } from '@mui/material';
+import './MainMenu.css';
 
 const MainMenu = () => (
-  <div>
-    <Menu fixed='top' inverted>
-      <Container fluid>
-        <Menu.Item as='span' header>
-          <Image size='mini' src='/logo192.png' style={{ marginRight: '1.5em' }} />
-          <Link to='/'>Onebox</Link>
-        </Menu.Item>
-        <Menu.Item as='span'><Link to='/'>Home</Link></Menu.Item>
-        <Menu.Item as='span'><Link to='/contact'>Contact</Link></Menu.Item>
-
-        <Dropdown item simple text='Dropdown'>
-          <Dropdown.Menu>
-            <Dropdown.Item>List Item</Dropdown.Item>
-            <Dropdown.Item>List Item</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Header>Header Item</Dropdown.Header>
-            <Dropdown.Item>
-              <i className='dropdown icon' />
-              <span className='text'>Submenu</span>
-              <Dropdown.Menu>
-                <Dropdown.Item>List Item</Dropdown.Item>
-                <Dropdown.Item>List Item</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown.Item>
-            <Dropdown.Item>List Item</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Container>
-    </Menu>
-  </div>
+  <Toolbar sx={{ flexWrap: 'wrap' }}>
+    <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+     <Link to='/'>ONEBOX</Link>
+    </Typography>
+    <nav className="main-navigation-wrapper">
+      <ul className="main-navigation-menu">
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/contact'>Contact</Link>
+        </li>
+      </ul>
+    </nav>
+    <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+      Login
+    </Button>
+  </Toolbar>
 )
 
 export default MainMenu

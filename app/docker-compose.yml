@@ -39,6 +39,17 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    restart: always
+    networks:
+      - onebox-network
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
 networks:
   onebox-network:
 volumes:
