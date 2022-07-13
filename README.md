@@ -19,7 +19,7 @@ Clone the repository
 git clone git@github.com:jaybabak/onebox.git
 ```
 
-Change directory
+Change directory.
 
 ```bash
 cd onebox/app
@@ -30,22 +30,50 @@ Install Nest.js CLI globally
 ```bash
 npm i -g @nestjs/cli
 ```
-## Build docler containers and start development environment
+## Build back-end Docker containers (server, db etc..)
 
+Run the following command to install the dependancies, make sure to be inside the "app" directory.
+
+```bash
+npm install
+```
 Run the following command to build the containers and start the development environment, make sure to be inside the "app" directory.
 
 ```bash
 make up
 ```
-Run the container and Nest.js development environment in quiet/silent mode.
+Run the container and Nest.js development environment in quiet/silent mode (not recommended for local development, this hides the console output).
 
 ```bash
 make up-silent
 ```
 
+## Build the React front-end (client)
+
+In a new terminal window, change directory to "client" folder.
+
+```bash
+cd onebox/client
+```
+
+Run the following command to install the dependancies, make sure to be inside the "client" directory.
+
+```bash
+npm install
+```
+Run the following command to build the containers and start the development environment, make sure to be inside the "client" directory.
+
+```bash
+make up
+```
+
 ## View the app
 
-Visit [http://localhost:3000](http://localhost:3000).
+Visit back-end [http://localhost:3002](http://localhost:3002).
+
+Visit front-end [http://localhost:3000](http://localhost:3000).
+
+## Optional
 
 Update /etc/hosts (mac) if you want to use a custom development domain with the following:
 
@@ -53,7 +81,7 @@ Update /etc/hosts (mac) if you want to use a custom development domain with the 
 localhost:3000 onebox.dev
 ```
 
-## Available Commands
+## Available Commands (app)
   
 | Command | Description |
 |--|--|
