@@ -6,7 +6,7 @@ import './MainMenu.css';
 const MainMenu = () => (
   <Toolbar sx={{ flexWrap: 'wrap' }}>
     <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
-     <Link to='/'>ONEBOX</Link>
+      <Link to='/'>ONEBOX</Link>
     </Typography>
     <nav className="main-navigation-wrapper">
       <ul className="main-navigation-menu">

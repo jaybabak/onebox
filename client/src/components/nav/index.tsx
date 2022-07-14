@@ -1,5 +1,5 @@
 import MainMenu from './MainMenu/MainMenu'
 import FooterMenu from './FooterMenu/FooterMenu'
-import SideBar from './SideBar/SideBar'
+import SideBarMenu from './SideBarMenu/SideBarMenu'
 
-export { MainMenu, FooterMenu, SideBar }
+export { MainMenu, FooterMenu, SideBarMenu }

@@ -4,8 +4,8 @@ import { Box, Container } from '@mui/material';
 import './footer.css';
 
 const Footer = () => (
-  <Box className="footer">
-    <Container component="footer">
+  <Box component="footer" className="footer">
+    <Container>
       <FooterMenu />
     </Container> 
   </Box>

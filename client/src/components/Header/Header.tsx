@@ -1,5 +1,5 @@
 import { AppBar, useMediaQuery, useTheme } from '@mui/material';
-import { MainMenu, SideBar } from '../nav';
+import { MainMenu, SideBarMenu } from '../nav';
 
 const Header = () => {
   const theme = useTheme();
@@ -15,7 +15,7 @@ const Header = () => {
     >
       {isMobile ? 
         (
-          <SideBar/>
+          <SideBarMenu/>
         )
       :(
         <MainMenu/>
