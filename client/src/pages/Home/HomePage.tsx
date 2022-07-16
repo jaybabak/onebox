@@ -50,7 +50,7 @@ function Homepage() {
   
   return (
     <Container className="homepage">
-      <h1>{posts}</h1>
+      <h1>{posts ? posts : 'Hello World!'}</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
         ligula eget dolor. Aenean massa strong. Cum sociis natoque penatibus et

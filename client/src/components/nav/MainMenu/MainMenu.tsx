@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import { Toolbar, Typography, Button } from '@mui/material';
+import { ThemeModeSwitcher } from '../../global';
 import './MainMenu.css';
 
 const MainMenu = () => (
@@ -18,9 +19,10 @@ const MainMenu = () => (
         </li>
       </ul>
     </nav>
-    <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+    <Button variant="outlined" href="#" sx={{ color: 'success.main', my: 1, mx: 1.5 }}>
       Login
     </Button>
+    <ThemeModeSwitcher/>
   </Toolbar>
 )
 
