@@ -91,6 +91,8 @@ localhost:3000 onebox.dev
 | down | Stops and removes the docker containers. |
 | stop | Stops the running containers. |
 | shell | SSH into the main app container. |
+| shell-db | SSH into the MongoDB container with mongosh |
+| db | Get the MongoDB connection string |
 
 ## Help
 

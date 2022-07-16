@@ -19,38 +19,29 @@ services:
       - onebox-network
     depends_on:
       - redis
-      - postgres
+      - mongo
   redis:
     container_name: redis
     image: redis:5
     networks:
       - onebox-network
-  postgres:
-    container_name: postgres
-    image: postgres:12
-    networks:
-      - onebox-network
-    environment:
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_USER: ${DB_USERNAME}
-      POSTGRES_DB: ${DB_DATABASE_NAME}
-      PG_DATA: /var/lib/postgresql/data
-    ports:
-      - 5432:5432
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-  adminer:
-    image: adminer
+  mongo:
+    container_name: mongo
+    image: mongo
     restart: always
+    environment:
+      MONGO_INITDB_DATABASE: ${DB_DATABASE_NAME}
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./data:/data/db
+      - ./.config/mongo-entrypoint:/docker-entrypoint-initdb.d/"
+    ports:
+      - 27017:27017
     networks:
       - onebox-network
-    ports:
-      - 8080:8080
-    depends_on:
-      - postgres
-    environment:
-      ADMINER_DEFAULT_SERVER: postgres
 networks:
   onebox-network:
 volumes:
   pgdata:
+  data:
