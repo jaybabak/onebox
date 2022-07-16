@@ -58,11 +58,17 @@ shell:
 
 .PHONY: shell-db
 shell-db:
-	@docker exec -ti mongo mongosh -u onebox -p onebox
+	@docker exec -ti mongo mongosh -u ${DB_USERNAME} -p ${DB_PASSWORD}
 
 .PHONY: db
 db:
-	@echo 'mongodb://${DB_USERNAME}:${DB_PASSWORD}:@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0'
+	@echo "-------------------------------------------------------------------------"
+	@echo "### Host machine URL (use to access mongo outside Docker Containers e.g: MongoDB Compass GUI) ###"
+	@echo 'mongodb://${DB_USERNAME}:${DB_PASSWORD}@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0'
+	@echo "-------------------------------------------------------------------------"
+	@echo "### Localhost URL ###"
+	@echo 'mongodb://${DB_USERNAME}:${DB_PASSWORD}@mongo:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.5.0'
+	@echo "-------------------------------------------------------------------------"
 
 # https://stackoverflow.com/a/6273809/1826109
 %:
